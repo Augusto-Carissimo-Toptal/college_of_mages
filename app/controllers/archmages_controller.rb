@@ -23,11 +23,7 @@ class ArchmagesController < ApplicationController
   
   def update
     @archmage = Archmage.find(params[:id])
-    if @archmage.update(params.require(:archmage).permit(:name, :title))
-      flash[:notice] = "Articule was update."
-    else
-      render 'edit'
-    end
+    @archmage.update(params.require(:archmage).permit(:name, :title))   
     redirect_to archmages_path
   end
 
