@@ -1,0 +1,10 @@
+<h1><%= "#{@mage.name}" %></h1>
+
+<ul>
+  <% @mage.membership.each do |membership| %>
+    <li>
+      <%= "#{@schools.find(membership.school_id).name}"%>
+    </li>
+  <% end %>
+</ul>
+

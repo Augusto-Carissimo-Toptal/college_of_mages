@@ -1,9 +1,12 @@
 <h1>Mages</h1>
-
+<%= link_to '[New Mage]', new_mage_path%>
+ 
 <ul>
   <% @mages.each do |mage| %>
     <li>
-      <%= "#{mage.name}" %>
+      <h2><%= link_to "#{mage.name}", mage_path(mage.id)%></h3>
+      <%= link_to '[Edit]', edit_mage_path(mage.id), method: :patch %>
+      <%= link_to '[Delete]', mage, :confirm => 'Are you sure?',:method => :delete %>
       
     </li>
   <% end %>

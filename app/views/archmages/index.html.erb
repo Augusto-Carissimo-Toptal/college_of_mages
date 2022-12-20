@@ -4,9 +4,9 @@
 <ul>
   <% @archmages.each do |archmage| %>
     <li>
-      <h3><%= link_to "#{archmage.name}, #{archmage.title}", archmage_path(archmage.id)%></h3>
+      <h2><%= link_to "#{archmage.name}, #{archmage.title}", archmage_path(archmage.id)%></h3>
       <%= link_to '[Edit]', edit_archmage_path(archmage.id), method: :patch %>
-      <%= link_to '[Delete]', archmage_path(archmage.id), :method => :delete %>
+      <%= link_to '[Delete]', archmage, :confirm => 'Are you sure?',:method => :delete %>
       
     </li>
   <% end %>

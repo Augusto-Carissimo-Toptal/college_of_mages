@@ -1,0 +1,18 @@
+<h1>Edit Mage</h1>
+
+<%= form_with(model: @mage, local: true) do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :elemental_power %><br>
+      <%= f.text_field :elemental_power %>
+    </p>
+
+    <p>
+      <%= f.submit %><br>
+
+    </p>
+  <% end %>

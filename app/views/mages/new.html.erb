@@ -1,0 +1,13 @@
+<h1>Add new Mage</h1>
+
+<%= form_with scope: :mage, url: mages_path, local: true, data: { turbo: false } do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.submit %><br>
+
+    </p>
+  <% end %>
