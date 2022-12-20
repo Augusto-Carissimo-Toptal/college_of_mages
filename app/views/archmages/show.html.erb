@@ -1,0 +1,11 @@
+<h1><%= @archmage.title %></h1>
+
+<ul>
+  <% @archmage.school.each do |school| %>
+    <li>
+      <%= "#{school.name}" %>
+      
+    </li>
+  <% end %>
+</ul>
+

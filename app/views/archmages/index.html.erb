@@ -1,0 +1,10 @@
+<h1>Archmages</h1>
+ 
+<ul>
+  <% @archmages.each do |archmage| %>
+    <li>
+      <a href=""><%= "#{archmage.name}, #{archmage.title}" %></a>
+      
+    </li>
+  <% end %>
+</ul>

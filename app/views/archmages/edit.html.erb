@@ -1,0 +1,18 @@
+<h1>Edit Archmage</h1>
+
+<%= form_with(model: @archmage, local: true) do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.submit %><br>
+
+    </p>
+  <% end %>
