@@ -30,4 +30,10 @@ class ArchmagesController < ApplicationController
     end
     redirect_to archmages_path
   end
+
+  def destroy
+    @archmage = Archmage.find(params[:id])
+    @archmage.destroy
+    redirect_to archmages_path 
+  end
 end

@@ -1,9 +1,12 @@
 <h1>Archmages</h1>
+<%= link_to '[New Archmage]', new_archmage_path%>
  
 <ul>
   <% @archmages.each do |archmage| %>
     <li>
-      <a href=""><%= "#{archmage.name}, #{archmage.title}" %></a>
+      <h3><%= link_to "#{archmage.name}, #{archmage.title}", archmage_path(archmage.id)%></h3>
+      <%= link_to '[Edit]', edit_archmage_path(archmage.id), method: :patch %>
+      <%= link_to '[Delete]', archmage_path(archmage.id), :method => :delete %>
       
     </li>
   <% end %>
