@@ -24,11 +24,7 @@ class MagesController < ApplicationController
   
   def update
     @mage = Mage.find(params[:id])
-    if @mage.update(params.require(:mage).permit(:name, :title))
-      flash[:notice] = "Articule was update."
-    else
-      render 'edit'
-    end
+    @mage.update(params.require(:mage).permit(:name, :title))
     redirect_to mages_path
   end
 

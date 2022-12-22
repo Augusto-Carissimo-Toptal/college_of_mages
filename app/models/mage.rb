@@ -1,10 +1,9 @@
 class Mage < ApplicationRecord
   enum elemental_power: {
-    nul: 0,
-    fire: 10,
-    water: 20,
-    earth: 30,
-    air: 40
+    fire: 'fire',
+    water: 'water',
+    earth: 'earth',
+    air: 'air'
   }
   has_many :membership
 end
