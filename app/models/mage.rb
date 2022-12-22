@@ -7,3 +7,4 @@ class Mage < ApplicationRecord
   }
   has_many :membership
 end
+cd
